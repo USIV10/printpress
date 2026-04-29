@@ -1,0 +1,100 @@
+.page { padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.loading { padding: 40px; color: var(--text3); font-size: 13px; }
+
+.flashSuccess {
+  background: var(--green3); border: 1px solid rgba(45,212,160,.3);
+  color: var(--green); font-size: 13px; padding: 11px 16px;
+  border-radius: 8px; font-weight: 500;
+}
+.flashError {
+  background: var(--red2); border: 1px solid rgba(245,96,96,.3);
+  color: var(--red); font-size: 13px; padding: 11px 16px;
+  border-radius: 8px; font-weight: 500;
+}
+
+/* Enable toggle row */
+.enableRow {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+}
+.enableLabel { font-size: 14px; font-weight: 500; color: var(--text); }
+.enableSub   { font-size: 12px; color: var(--text3); margin-top: 3px; }
+
+/* Toggle switch */
+.toggle { position: relative; display: inline-block; cursor: pointer; flex-shrink: 0; }
+.toggle input { position: absolute; opacity: 0; width: 0; height: 0; }
+.toggleTrack {
+  display: block; width: 46px; height: 26px;
+  background: var(--border2); border-radius: 13px;
+  transition: background .2s; position: relative;
+}
+.toggle input:checked + .toggleTrack { background: var(--green2); }
+.toggleThumb {
+  position: absolute; top: 4px; left: 4px;
+  width: 18px; height: 18px; background: #fff; border-radius: 50%;
+  transition: transform .2s; pointer-events: none;
+}
+.toggle input:checked + .toggleTrack .toggleThumb { transform: translateX(20px); }
+
+/* Form layout */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.hint {
+  grid-column: 1 / -1;
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 12px; color: var(--text3); line-height: 1.6;
+  background: var(--bg3); border-radius: 8px; padding: 10px 12px;
+}
+.hint svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 1px; }
+
+/* Provider preset buttons */
+.presetRow { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.presetBtn {
+  padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 500;
+  background: var(--bg3); border: 1px solid var(--border2);
+  color: var(--text2); font-family: 'DM Sans', sans-serif; cursor: pointer;
+  transition: all .15s;
+}
+.presetBtn:hover { color: var(--text); border-color: var(--border); }
+.presetActive { background: var(--green3) !important; color: var(--green) !important; border-color: var(--green) !important; }
+
+/* Info / instruction box */
+.infoBox {
+  background: var(--bg3); border: 1px solid var(--border2);
+  border-left: 3px solid var(--blue);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px; font-size: 12px;
+  color: var(--text2); line-height: 1.7; margin-bottom: 4px;
+}
+.infoBox strong { color: var(--text); }
+.infoBox a { color: var(--blue); }
+.steps {
+  margin: 8px 0 8px 16px; display: flex; flex-direction: column; gap: 3px;
+}
+.steps li { color: var(--text2); }
+
+/* Password field */
+.pwWrap { position: relative; }
+.pwEye {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; font-size: 15px; cursor: pointer;
+  opacity: .6; line-height: 1;
+}
+.pwEye:hover { opacity: 1; }
+
+/* Action buttons */
+.btnGroup { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.btnHints { display: flex; flex-direction: column; gap: 4px; }
+.btnHints p { font-size: 12px; color: var(--text3); line-height: 1.5; }
+.btnHints strong { color: var(--text2); }
+
+/* Included list */
+.included { display: flex; flex-direction: column; gap: 10px; }
+.includedRow {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13px; color: var(--text2); line-height: 1.5;
+}
+.includedRow strong { color: var(--text); }
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green); flex-shrink: 0; margin-top: 5px;
+}

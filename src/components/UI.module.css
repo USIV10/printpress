@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+.title { font-size: 18px; font-weight: 600; color: var(--text); letter-spacing: -.4px; }
+.actions { display: flex; gap: 8px; align-items: center; }
+
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.cardHead {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin-bottom: 14px;
+}
+
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.mLabel { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 8px; }
+.mValue { font-size: 22px; font-weight: 600; color: var(--text); letter-spacing: -.5px; font-family: 'DM Mono', monospace; }
+.mSub { font-size: 11px; margin-top: 4px; color: var(--text3); }
+.up { color: var(--green) !important; }
+.down { color: var(--red) !important; }
+
+.badge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-family: 'DM Mono', monospace;
+}
+.paid       { background: var(--green3); color: var(--green); }
+.pending    { background: var(--amber2); color: var(--amber); }
+.progress   { background: var(--blue2);  color: var(--blue);  }
+.cancelled  { background: var(--red2);   color: var(--red);   }
+
+.btn {
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.primary { background: var(--green); color: #0a1a14; }
+.primary:hover { opacity: .9; transform: translateY(-1px); }
+.ghost { background: var(--bg3); color: var(--text2); border: 1px solid var(--border2); }
+.ghost:hover { color: var(--text); border-color: var(--border); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+.formGroup { display: flex; flex-direction: column; gap: 5px; }
+.full { grid-column: 1 / -1; }
+.label { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; font-weight: 500; }
+
+.barChart { display: flex; flex-direction: column; gap: 2px; }
+.barRow { display: flex; align-items: center; gap: 8px; font-size: 12px; margin-bottom: 7px; }
+.barLabel { width: 80px; color: var(--text2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex-shrink: 0; }
+.barTrack { flex: 1; height: 5px; background: var(--bg4); border-radius: 3px; overflow: hidden; }
+.barFill { height: 100%; border-radius: 3px; background: var(--green); transition: width .4s ease; }
+.barVal { width: 72px; text-align: right; color: var(--text); font-family: 'DM Mono', monospace; font-size: 11px; flex-shrink: 0; }

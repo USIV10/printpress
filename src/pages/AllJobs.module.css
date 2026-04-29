@@ -1,0 +1,82 @@
+.page { padding: 20px 24px; display: flex; flex-direction: column; gap: 16px; flex: 1; }
+.loading { padding: 40px; color: var(--text3); font-size: 13px; }
+
+.count {
+  font-size: 12px; color: var(--text3);
+  font-family: 'DM Mono', monospace; white-space: nowrap;
+}
+.search {
+  width: 220px; padding: 7px 12px; font-size: 12px;
+  background: var(--bg3); border: 1px solid var(--border2);
+  border-radius: 8px; color: var(--text); outline: none;
+  font-family: 'DM Sans', sans-serif;
+}
+.search:focus { border-color: var(--green); }
+.filterSelect {
+  padding: 7px 10px; font-size: 12px;
+  background: var(--bg3); border: 1px solid var(--border2);
+  border-radius: 8px; color: var(--text); outline: none;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th {
+  text-align: left; padding: 10px 12px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: .6px;
+  color: var(--text3); font-weight: 500; border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.table td {
+  padding: 10px 12px; border-bottom: 1px solid var(--border);
+  color: var(--text2); vertical-align: middle;
+}
+.table tr:last-child td { border: none; }
+.table tr:hover td { background: var(--bg3); }
+.saving td { opacity: .5; pointer-events: none; }
+
+.bold   { color: var(--text) !important; font-weight: 500; }
+.muted  { color: var(--text2) !important; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mono   { font-family: 'DM Mono', monospace; font-size: 12px; white-space: nowrap; }
+
+.svcBadge {
+  font-size: 10px; font-weight: 500; padding: 2px 8px;
+  border-radius: 20px; white-space: nowrap;
+  font-family: 'DM Mono', monospace;
+}
+.svc_print   { background: var(--blue2);  color: var(--blue);  }
+.svc_digital { background: #1a0a2e;       color: #b07ef5;      }
+.svc_photo   { background: var(--amber2); color: var(--amber); }
+.svc_momo    { background: var(--green3); color: var(--green); }
+
+/* Inline status dropdown — styled like a badge */
+.statusSelect {
+  font-size: 11px; font-weight: 500; padding: 4px 8px;
+  border-radius: 20px; border: none; cursor: pointer;
+  font-family: 'DM Mono', monospace; outline: none;
+  appearance: none; -webkit-appearance: none;
+  text-align: center; transition: opacity .15s;
+  min-width: 100px;
+}
+.statusSelect:hover { opacity: .85; }
+.statusSelect:disabled { cursor: wait; }
+
+/* Colour per status */
+.st_Paid         { background: var(--green3); color: var(--green); }
+.st_Pending      { background: var(--amber2); color: var(--amber); }
+.st_In_progress  { background: var(--blue2);  color: var(--blue);  }
+.st_Cancelled    { background: var(--red2);   color: var(--red);   }
+
+/* Status options inherit from select, browsers override bg — acceptable */
+.statusSelect option { background: var(--bg3); color: var(--text); }
+
+.deleteBtn {
+  background: none; border: 1px solid var(--border2);
+  border-radius: 6px; color: var(--text3); font-size: 11px;
+  padding: 4px 10px; font-family: 'DM Sans', sans-serif; transition: all .15s;
+}
+.deleteBtn:hover { border-color: var(--red); color: var(--red); background: var(--red2); }
+
+.empty {
+  text-align: center; color: var(--text3); font-size: 13px; padding: 32px !important;
+}

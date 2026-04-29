@@ -1,0 +1,74 @@
+.page { padding: 20px 24px; display: flex; flex-direction: column; gap: 16px; flex: 1; }
+.loading { padding: 40px; color: var(--text3); font-size: 13px; }
+
+.total { font-size: 13px; color: var(--text2); }
+.total strong { color: var(--green); font-family: 'DM Mono', monospace; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btnRow { display: flex; justify-content: flex-end; margin-top: 14px; }
+
+.payRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+}
+.payRow:last-child { border: none; padding-bottom: 0; }
+
+.payLeft { flex: 1; min-width: 0; }
+.payName { font-size: 13px; font-weight: 500; color: var(--text); }
+.payMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 3px;
+  flex-wrap: wrap;
+}
+
+.netTag {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-family: 'DM Mono', monospace;
+}
+
+.payRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.payAmount {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--green);
+}
+
+.delBtn {
+  background: none;
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  color: var(--text3);
+  font-size: 14px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .15s;
+  line-height: 1;
+}
+.delBtn:hover { border-color: var(--red); color: var(--red); background: var(--red2); }
+
+.empty { color: var(--text3); font-size: 13px; padding: 16px 0; }

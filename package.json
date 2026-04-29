@@ -1,0 +1,59 @@
+{
+  "name": "printpress",
+  "version": "1.0.0",
+  "description": "Printing Press Sales & Profit Management System",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build:frontend": "vite build",
+    "build": "npm run build:frontend && electron-builder",
+    "electron": "electron electron/main.js",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron electron/main.js\"",
+    "electron:build": "vite build && electron-builder",
+    "rebuild": "electron-rebuild -f -w better-sqlite3,nodemailer",
+    "postinstall": "electron-rebuild -f -w better-sqlite3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "dayjs": "^1.11.10",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.13",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.13.3",
+    "electron-rebuild": "^3.2.9",
+    "vite": "^5.1.4",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.printpress.app",
+    "productName": "PrintPress",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    }
+  }
+}

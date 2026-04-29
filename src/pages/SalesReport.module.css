@@ -1,0 +1,91 @@
+.page { padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.loading { padding: 40px; color: var(--text3); font-size: 13px; }
+
+.periodSelect {
+  padding: 7px 12px; font-size: 12px;
+  background: var(--bg3); border: 1px solid var(--border2);
+  border-radius: 8px; color: var(--text);
+  font-family: 'DM Sans', sans-serif; outline: none;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 12px;
+}
+
+/* Bar chart */
+.chartBars {
+  display: flex; align-items: flex-end;
+  gap: 5px; height: 120px; padding: 0 2px;
+}
+.chartBarWrap {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; gap: 4px; justify-content: flex-end;
+}
+.chartVal {
+  font-size: 8px; color: var(--text3);
+  font-family: 'DM Mono', monospace; white-space: nowrap;
+  overflow: hidden; text-align: center; max-width: 100%;
+}
+.chartBar {
+  width: 100%; border-radius: 3px 3px 0 0;
+  background: var(--green); opacity: .8; min-height: 2px;
+  transition: height .4s ease;
+}
+.chartBar:hover { opacity: 1; }
+.chartLbl { font-size: 9px; color: var(--text3); font-family: 'DM Mono', monospace; }
+
+/* Table */
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.table th {
+  text-align: left; padding: 8px 10px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: .6px;
+  color: var(--text3); font-weight: 500; border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.table td {
+  padding: 9px 10px; border-bottom: 1px solid var(--border);
+  color: var(--text2); vertical-align: middle;
+}
+.table tbody tr:last-child td { border: none; }
+.table tbody tr:hover td { background: var(--bg3); }
+
+.bold  { color: var(--text) !important; font-weight: 500; }
+.muted { color: var(--text2) !important; max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mono  { font-family: 'DM Mono', monospace; white-space: nowrap; }
+
+.svcBadge {
+  font-size: 10px; font-weight: 500; padding: 2px 8px;
+  border-radius: 20px; white-space: nowrap; font-family: 'DM Mono', monospace;
+}
+.svc_print   { background: var(--blue2);  color: var(--blue);  }
+.svc_digital { background: #1a0a2e;       color: #b07ef5;      }
+.svc_photo   { background: var(--amber2); color: var(--amber); }
+.svc_momo    { background: var(--green3); color: var(--green); }
+
+/* Totals row */
+.totalsRow td {
+  background: var(--bg3) !important;
+  border-top: 2px solid var(--border2) !important;
+  border-bottom: none !important;
+  font-weight: 600;
+}
+.totalsLabel {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: .6px; color: var(--text3) !important;
+  padding-left: 10px;
+}
+
+.empty { color: var(--text3); font-size: 13px; padding: 20px 0; text-align: center; }
+.emptyRow { text-align: center; color: var(--text3); font-size: 13px; padding: 32px !important; }
+
+.exportRow { display: flex; gap: 8px; }
+.exportNote { font-size: 11px; color: var(--text3); margin-top: 10px; line-height: 1.6; }

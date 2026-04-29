@@ -1,0 +1,57 @@
+.page { padding: 20px 24px; display: flex; flex-direction: column; gap: 16px; flex: 1; }
+.loading { padding: 40px; color: var(--text3); font-size: 13px; }
+.date { font-size: 12px; color: var(--text3); font-family: 'DM Mono', monospace; }
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 12px;
+}
+
+.jobRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+}
+.jobRow:last-child { border: none; padding-bottom: 0; }
+.jobName { font-size: 13px; font-weight: 500; color: var(--text); }
+.jobMeta { font-size: 11px; color: var(--text3); margin-top: 2px; }
+
+.empty { color: var(--text3); font-size: 13px; padding: 12px 0; }
+
+.formula {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+.formulaLabel { color: var(--green); font-weight: 600; }
+.pill { background: var(--bg4); padding: 2px 8px; border-radius: 4px; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text); }
+.op { color: var(--text3); }
+
+.rowRight { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.price { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; color: var(--text); }
+
+.svcPill {
+  font-size: 10px; font-weight: 500; padding: 1px 7px;
+  border-radius: 20px; font-family: 'DM Mono', monospace;
+}
+.cat_print   { background: var(--blue2);  color: var(--blue);  }
+.cat_digital { background: #1a0a2e;       color: #b07ef5;      }
+.cat_photo   { background: var(--amber2); color: var(--amber); }
+.cat_momo    { background: var(--green3); color: var(--green); }
