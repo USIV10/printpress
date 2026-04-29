@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Printing Press Sales & Profit Management System",
   "main": "electron/main.js",
+  "author": "Yussif Abdul Karim",
 "scripts": {
   "build:frontend": "vite build",
   "build": "rm -rf dist-electron && npm run build:frontend && electron-builder",
@@ -34,13 +35,14 @@
   "asar": true,
   "files": [
     "dist/**/*",
-    "main.js",
-    "preload.js",
+    "electron/**/*",
     "package.json"
   ],
-  "extraResources": [],
   "win": {
     "target": "nsis"
+  },
+  "mac": {
+    "target": "dmg"
   }
 }
 }
