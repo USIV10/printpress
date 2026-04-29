@@ -39,19 +39,12 @@
     "package.json"
   ],
   "win": {
-<<<<<<< HEAD
-    "target": "nsis"
-  },
-  "mac": {
-    "target": "dmg"
-=======
     "target": "nsis",
     "icon": "assets/icon.ico"
   },
   "mac": {
     "target": "dmg",
     "icon": "assets/icon.icns"
->>>>>>> 5048d52 (Fix GitHub Actions build)
   }
 }
 }
