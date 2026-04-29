@@ -5,7 +5,8 @@
   "main": "electron/main.js",
 "scripts": {
   "build:frontend": "vite build",
-  "build": "rm -rf dist-electron && npm run build:frontend && electron-builder"
+  "build": "rm -rf dist-electron && npm run build:frontend && electron-builder",
+  "postinstall": "electron-builder install-app-deps"
 },
   "dependencies": {
     "better-sqlite3": "^9.4.3",
