@@ -33,27 +33,19 @@
     "vite": "^5.1.4",
     "wait-on": "^7.2.0"
   },
-  "build": {
-    "appId": "com.printpress.app",
-    "productName": "PrintPress",
-    "directories": {
-      "output": "dist-electron"
-    },
-    "files": [
-      "dist/**/*",
-      "electron/**/*"
-    ],
-    "win": {
-      "target": "nsis",
-      "icon": "assets/icon.ico"
-    },
-    "mac": {
-      "target": "dmg",
-      "icon": "assets/icon.icns"
-    },
-    "linux": {
-      "target": "AppImage",
-      "icon": "assets/icon.png"
-    }
+"build": {
+  "appId": "com.printpress.app",
+  "productName": "PrintPress",
+  "asar": true,
+  "files": [
+    "dist/**/*",
+    "main.js",
+    "preload.js",
+    "package.json"
+  ],
+  "extraResources": [],
+  "win": {
+    "target": "nsis"
   }
+}
 }
