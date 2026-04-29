@@ -3,16 +3,10 @@
   "version": "1.0.0",
   "description": "Printing Press Sales & Profit Management System",
   "main": "electron/main.js",
-  "scripts": {
-    "dev": "vite",
-    "build:frontend": "vite build",
-    "build": "npm run build:frontend && electron-builder",
-    "electron": "electron electron/main.js",
-    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron electron/main.js\"",
-    "electron:build": "vite build && electron-builder",
-    "rebuild": "electron-rebuild -f -w better-sqlite3,nodemailer",
-    "postinstall": "electron-rebuild -f -w better-sqlite3"
-  },
+"scripts": {
+  "build:frontend": "vite build",
+  "build": "rm -rf dist-electron && npm run build:frontend && electron-builder"
+},
   "dependencies": {
     "better-sqlite3": "^9.4.3",
     "dayjs": "^1.11.10",
